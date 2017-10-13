@@ -1,0 +1,17 @@
+Source: xfonts-uw-ttyp0
+Section: fonts
+Priority: optional
+Maintainer: Slawomir Gonet <slawek@otwiera.cz>
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: bzip2, xfonts-utils
+Standards-Version: 3.9.6
+
+Package: xfonts-uw-ttyp0
+Architecture: all
+Depends: ${misc:Depends}
+Description: Monospace Bitmap Screen Fonts for X11
+ UW ttyp0 is a family of bitmap programmer's fonts in bdf format. It covers most
+ of the Latin and Cyrillic alphabet, Greek, Armenian, Georgian (only Mkhedruli),
+ Hebrew (without cantillation marks), Thai, most of IPA (but no UPA), standard
+ punctuation, common symbols, some mathematics, line graphics, a few dingbats,
+ and Powerline delimiter symbols.

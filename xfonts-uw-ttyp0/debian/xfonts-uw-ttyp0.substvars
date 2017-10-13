@@ -1,0 +1,2 @@
+misc:Depends=xfonts-utils
+misc:Pre-Depends=

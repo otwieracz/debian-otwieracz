@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+%:
+	dh  $@
+
+override_dh_auto_configure:
+	./configure
+
+override_dh_auto_install:
+	# Add here commands to install the package into debian/tmp.
+	cp genpcf/*.pcf.gz `pwd`/debian/xfonts-uw-ttyp0/usr/share/fonts/X11/misc
+
+override_dh_auto_clean:
+
+	make clean || true
+	-rm -f dist/*
+
+	dh_auto_clean

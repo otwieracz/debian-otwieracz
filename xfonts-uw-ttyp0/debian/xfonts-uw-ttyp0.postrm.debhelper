@@ -1,0 +1,5 @@
+# Automatically added by dh_installxfonts/10.8
+if [ -x "`which update-fonts-dir 2>/dev/null`" ]; then
+	update-fonts-dir --x11r7-layout misc
+fi
+# End automatically added section
