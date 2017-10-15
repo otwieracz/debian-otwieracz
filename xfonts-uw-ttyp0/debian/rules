@@ -3,15 +3,15 @@
 	dh  $@
 
 override_dh_auto_configure:
-	./configure
+	./configure --prefix=/usr --pcfdir=/usr/share/fonts/X11/misc
 
 override_dh_auto_install:
-	# Add here commands to install the package into debian/tmp.
-	cp genpcf/*.pcf.gz `pwd`/debian/xfonts-uw-ttyp0/usr/share/fonts/X11/misc
+	dh_auto_install
+	rm -v "`pwd`/debian/xfonts-uw-ttyp0/usr/share/fonts/X11/misc/fonts.dir"
+	rm -v "`pwd`/debian/xfonts-uw-ttyp0/usr/share/fonts/X11/misc/fonts.scale"
+	mkdir -p "`pwd`/debian/xfonts-uw-ttyp0/etc/fonts/conf.d"
+	dh_install -pxfonts-uw-ttyp0 debian/50-enable-uw-ttyp0.conf etc/fonts/conf.avail
+	dh_link -pxfonts-uw-ttyp0 etc/fonts/conf.avail/50-enable-uw-ttyp0.conf etc/fonts/conf.d/50-enable-uw-ttyp0.conf
 
-override_dh_auto_clean:
 
-	make clean || true
-	-rm -f dist/*
 
-	dh_auto_clean

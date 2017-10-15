@@ -1,8 +1,8 @@
 Package: xfonts-uw-ttyp0
-Version: 1.3-1
+Version: 1.3+nmu2
 Architecture: all
 Maintainer: Slawomir Gonet <slawek@otwiera.cz>
-Installed-Size: 2049
+Installed-Size: 2055
 Depends: xfonts-utils
 Section: fonts
 Priority: optional

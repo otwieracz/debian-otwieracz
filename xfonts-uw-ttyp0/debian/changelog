@@ -1,5 +1,7 @@
-xfonts-uw-ttyp0 (1.3-1) UNRELEASED; urgency=medium
+xfonts-uw-ttyp0 (1.3+nmu2) UNRELEASED; urgency=medium
 
   * Initial release.
+  * Strip not necessary files.
+  * Enable Ttyp0 family by default.
 
- -- Slawomir Gonet <slawek@otwiera.cz>  Fri, 13 Oct 2017 19:56:54 +0200
+ -- Slawomir Gonet <otwieracz@odyssey.otwiera.cz>  Sun, 15 Oct 2017 19:06:28 +0200
